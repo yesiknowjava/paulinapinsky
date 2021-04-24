@@ -7,32 +7,53 @@
     <div id="top">
         <div id="masthead">
             <div id="logo">
-                <h1 class="sitename"><a href="https://paulinapinsky.com.br" title=""><img class="sitetitle"
-                            src="{{"/img/marca_Paulina3.png" | relURL }}"
-                            alt="PAULINA PINSKY" /></a></h1>
+                <h1 class="sitename"><a href="/" title=""><img class="sitetitle"
+                    src="{{"/img/marca_Paulina3.png" | relURL }}"
+                    alt="PAULINA PINSKY" /></a></h1>
                 <div class="description"></div>
             </div>
         </div>
-{{ partial "menu.html" . }}
+
+        {{ partial "menu.html" . }}
         <div class="clear"></div>
     </div>
 
+    <div class="container">
+        <div class="container-inner">
 
+            <div class="span-15 colborder home">
+                <div
+                    class="post-2459 post type-post status-publish format-standard has-post-thumbnail hentry category-biblia-bible tag-22">
+        {{ .Content }}
+                        {{ partial "pagination.html" . }}
+                        <div class="clear"></div>
+                    </div>
+        
+        
+                    <p class="nocomments">Comments are closed.</p>
+                </div>
+            <div class="span-8 last">
+                <div id="sidebar">
+                    <div class="item">
+                        <h3 class="sub">Tags</h3>
+                        {{ partial "tags.html" . }}
+                    </div>
+                </div>
+            </div>
 
-{{ .Content }}
+            <div class="clear"></div>
+        </div>
+    </div>
+{{ partial "footer.html" .}}
+<script type="ce321d7400717018bf153d5c-text/javascript"
+src="{{"/js/jquery.form.min.js" | relURL }}"></script>
+<script type="ce321d7400717018bf153d5c-text/javascript"
+src='{{"/js/scripts.js" | relURL }}'></script>
+<script type="ce321d7400717018bf153d5c-text/javascript"
+src="{{"/js/wp-embed.min.js" | relURL }}"></script>
 
-    {{partial "footer.html" .}}
-    <script type="ec9710fc436f8489b6ff8792-text/javascript"
-        src="https://paulinapinsky.com.br/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0"></script>
-    <script type="ec9710fc436f8489b6ff8792-text/javascript"
-        src='https://paulinapinsky.com.br/wp-content/plugins/contact-form-7/scripts.js?ver=2.2'></script>
-    <script type="ec9710fc436f8489b6ff8792-text/javascript"
-        src="https://paulinapinsky.com.br/wp-includes/js/wp-embed.min.js?ver=4.8.1"></script>
-    <script type="ec9710fc436f8489b6ff8792-text/javascript"
-        src="https://paulinapinsky.com.br/wp-includes/js/comment-reply.min.js?ver=4.8.1"></script>
-
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
-        data-cf-settings="ec9710fc436f8489b6ff8792-|49" defer=""></script>
+<script src="{{"/js/rocket-loader.min.js" | relURL }}"
+data-cf-settings="ce321d7400717018bf153d5c-|49" defer=""></script>
 </body>
 
 </html>

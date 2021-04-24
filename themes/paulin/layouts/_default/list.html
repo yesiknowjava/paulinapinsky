@@ -8,7 +8,7 @@
     <div id="top">
         <div id="masthead">
             <div id="logo">
-                <h1 class="sitename"><a href="https://paulinapinsky.com.br" title=""><img class="sitetitle"
+                <h1 class="sitename"><a href="/" title=""><img class="sitetitle"
                             src="{{"/img/marca_Paulina3.png" | relURL }}"
                             alt="PAULINA PINSKY" /></a></h1>
                 <div class="description"></div>
@@ -33,14 +33,21 @@
                         <a href="{{ .Permalink }}" title="{{ .Params.link}}"><img src="{{ .Params.image}}"
                                 alt="A Destruição de Sodoma / The Destruction of Sodoma"
                                 class="thumbnail thumbnail thumbnail " width="150" height="150" /></a>
-                        <p>1993 óleo s/tela e moldura / oil on canvas &amp; frame 69 cm. X 38.5 cm. Coleção Particular /
-                            Private Collection</p>
+                        <p>{{ .Params.statement }}</p>
                         <div class="clear"></div>
-                        <p class="postmetadata">Jun 15, 2010 | Categories:<a href="/{{ index ( .Params.Categories ) 0 }}"
-                                rel="category">{{ index ( .Params.Categories ) 0 }}</a> | Tags: <a
-                                href="/tags/{{ index ( .Params.Tags ) 0 }}" rel="tag">{{ index ( .Params.Tags ) 0 }}</a> | <span>Comments
-                                Off<span class="screen-reader-text"> on A Destruição de Sodoma / The Destruction of
-                                    Sodoma</span></span> </p>
+                        <p class="postmetadata">Jun 15, 2010 | Categories:
+                            {{ range .Params.Categories }}
+                            <a href="/{{ . }}"
+                            rel="category">{{ . }}</a>
+                            {{ end }}
+                               
+                                 | Tags: 
+                                 {{ range .Params.Tags}}
+                                 <a
+                                href="/tags/{{ . }}" rel="tag">{{ . }}</a> 
+                                {{end}}
+                                | <span>Comments
+                                Off<span class="screen-reader-text">  {{ .Params.title}}</span></span> </p>
                     </div>
                     <hr />
                     {{ end}}

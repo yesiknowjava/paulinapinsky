@@ -7,9 +7,9 @@
     <div id="top">
         <div id="masthead">
             <div id="logo">
-                <h1 class="sitename"><a href="https://paulinapinsky.com.br" title=""><img class="sitetitle"
-                            src="https://paulinapinsky.com.br/wp-content/uploads/2010/04/marca_Paulina3.png"
-                            alt="PAULINA PINSKY" /></a></h1>
+                <h1 class="sitename"><a href="/" title=""><img class="sitetitle"
+                    src="{{"/img/marca_Paulina3.png" | relURL }}"
+                    alt="PAULINA PINSKY" /></a></h1>
                 <div class="description"></div>
             </div>
         </div>
@@ -21,7 +21,17 @@
     <div class="container">
         <div class="container-inner">
 
-            {{ .Content }}
+            <div class="span-15 colborder home">
+                <div
+                    class="post-2459 post type-post status-publish format-standard has-post-thumbnail hentry category-biblia-bible tag-22">
+        {{ .Content }}
+                        {{ partial "pagination.html" . }}
+                        <div class="clear"></div>
+                    </div>
+        
+        
+                    <p class="nocomments">Comments are closed.</p>
+                </div>
             <div class="span-8 last">
                 <div id="sidebar">
                     <div class="item">
